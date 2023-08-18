@@ -29,26 +29,7 @@
             <!-- this is the body -->
             <!-- testing the homepage page here -->
 
-            <!-- Loop over each object in the projects array -->
-            {{#each posts as |post| }}
-            <div class="row mb-4 project border border-secondary">
-                <div class="col-md-8 bg-secondary text-white">
-                    <h2>
-                        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-                        <a class="text-white" href="/post/{{post.id}}">{{post.name}}</a>
-                    </h2>                   
-                </div>
-                <div class="col-md-4 bg-secondary text-white">
-                    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
-                </div>
-                <div>
-                    <p>
-                        {{post.description}}
-                    </p>
-                </div>
 
-            </div>
-            {{/each}}
 
             <!-- end of test -->
 
