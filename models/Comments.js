@@ -20,6 +20,20 @@ Comment.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
+        userId:{
+            type: DataTypes.INTEGER,
+            references:{
+                model:'user',
+                key:'id',
+            },
+        },
+        postId:{
+            type: DataTypes.INTEGER,
+            references:{
+                model:'post',
+                key:'id',
+            },
+        },
     },
     {
         sequelize,
