@@ -4,7 +4,10 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        // get all posts and JOIN with user data
+        // console.log("im in homepage");
+        // const postData = await Post.findAll();
+        // res.status(200).json(postData);
+        // // get all posts and JOIN with user data
         const postData = await Post.findAll({
             include: [
                 {
@@ -24,3 +27,4 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+module.exports = router;
