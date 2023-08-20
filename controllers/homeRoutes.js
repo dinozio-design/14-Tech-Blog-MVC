@@ -25,4 +25,14 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+//redirecting to login page
+router.get('/login', (req,res) =>{
+    if(req.session.logged_in) {
+        res.redirect('/dasboard');
+        return;
+    }
+    res.render('login');
+});
+
 module.exports = router;
